@@ -111,13 +111,13 @@ void draw(){
     
     float q = float(i)/float(s);
     println(q);
-    if(q < 0.15){
+    if(q < 0.25){
       c = #2EAC66;
-    } else if(( q >= 0.15) && (q < 0.50)){
+    } else if(( q >= 0.25) && (q < 0.50)){
       c = #009EE3;
-    } else if(( q >= 0.50) && (q < 0.85)){
+    } else if(( q >= 0.50) && (q < 0.75)){
       c = #E24352;
-    } else if( q >= 0.85){
+    } else if( q >= 0.75){
       c = #1C1C1B;
     }
 
