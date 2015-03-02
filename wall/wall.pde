@@ -24,7 +24,7 @@ int h = 800;
 ArrayList<Segment> pages = new ArrayList<Segment>();
 
 void load_data(){
-  JSONArray spec_json = loadJSONArray("geometry.json");
+  JSONArray spec_json = loadJSONArray("../data/geometry.json");
 
   for( int i=0; i < spec_json.size(); i++){
     JSONObject o = spec_json.getJSONObject(i);
