@@ -10,7 +10,10 @@ int h = 205*5 + 5;
 int bar_max = 200;
 int bar_width = 5;
 int offset = 1;
-  
+
+//PFont avenir = loadFont("AvenirNext-DemiBold-64.vlw");
+PFont avenir = createFont("AvenirNext-DemiBold", 64);
+
 class Segment {
   String title;
   int length;
@@ -155,6 +158,15 @@ void draw(){
  
   float r = float(bar_max) / float(max_length);
  
+  textFont(avenir, 64);
+  fill(255);
+
+  /**************************/
+  /* QUARTILES              */
+  /**************************/
+
+  text("quartiles", 5, 69); 
+ 
   Collections.sort(pages, new OrderBySpec());
 
   for(Segment p : pages){
@@ -190,6 +202,13 @@ void draw(){
     i++;
   }
 
+  /**************************/
+  /* PAGE ID                */
+  /**************************/
+
+  fill(255);
+  text("page id", 5, 274); 
+
   Collections.sort(pages, new OrderByPageId());
 
   i = 0;
@@ -211,6 +230,13 @@ void draw(){
 
     i++;
   }
+
+  /**************************/
+  /* LENGTH                 */
+  /**************************/
+
+  fill(255);
+  text("length", 5, 479); 
 
   Collections.sort(pages, new OrderByLength());
 
@@ -234,6 +260,13 @@ void draw(){
     i++;
   }
 
+  /**************************/
+  /* QUALITY                */
+  /**************************/
+
+  fill(255);
+  text("quality", 5, 684); 
+
   Collections.sort(pages, new OrderByQuality());
 
   i = 0;
@@ -256,6 +289,13 @@ void draw(){
     i++;
   }
   
+  /**************************/
+  /* NB OF REVS             */
+  /**************************/
+
+  fill(255);
+  text("revisions", 5, 889); 
+
   Collections.sort(pages, new OrderByRevisions());
 
   i = 0;
