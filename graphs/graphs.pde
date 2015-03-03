@@ -158,6 +158,17 @@ void draw(){
  
   float r = float(bar_max) / float(max_length);
  
+  /**************************/
+  /* GRID                   */
+  /**************************/
+ 
+ stroke(#CECECE);
+ strokeWeight(1);
+ for(int l = 1; l < 4; l++){
+   line( int(s/4) * l * (bar_width + offset) + 10 + 0.5, 0, int(s/4) * l * (bar_width + offset) + 10+ 0.5, h);
+ }
+ 
+  noStroke();
   textFont(avenir, 64);
   fill(255);
 
