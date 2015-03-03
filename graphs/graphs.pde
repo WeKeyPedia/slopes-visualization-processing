@@ -176,7 +176,7 @@ void draw(){
   /* QUARTILES              */
   /**************************/
 
-  text("quartiles", 5, 69); 
+  text("specialization", 5, 69); 
  
   Collections.sort(pages, new OrderBySpec());
 
